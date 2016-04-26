@@ -21,6 +21,12 @@
 #'
 #' @export
 #'
+#' @import sp
+#' @import raster
+#' @import stats
+#' @import utils
+#' @import BIEN3Project
+#'
 #' @note The examples are labeled as "Not run" becuase the function accesses files and if the directory
 #' is not correct, when the code is tested it wont be able to find the .bil file.
 #'
@@ -29,11 +35,6 @@
 #' species_data <- BIEN.BioClim.Species(species_vector = s_vec, zone_number = 7, filename = "test.csv", directory = "/filelocation/", storeInDirectory = TRUE)}
 #'
 BIEN.BioClim.Species <- function(species_vector, zone_number, filename = NULL, directory = NULL, storeInDirectory = FALSE) {
-  #invoke required packages
-  require(sp)
-  require(raster)
-  require(stats)
-  require(utils)
 
   #set working directory to the optional parameter if it's entered
   old_directory = getwd()
@@ -136,6 +137,12 @@ BIEN.BioClim.Species <- function(species_vector, zone_number, filename = NULL, d
 #'
 #' @export
 #'
+#' @import sp
+#' @import raster
+#' @import stats
+#' @import utils
+#' @import BIEN3Project
+#'
 #' @note The examples are labeled as "Not run" becuase the function accesses files and if the directory
 #' is not correct, when the code is tested it wont be able to find the .bil file.
 #'
@@ -144,11 +151,6 @@ BIEN.BioClim.Species <- function(species_vector, zone_number, filename = NULL, d
 #' genus_data <- BIEN.BioClim.Genus(genus_vector = g_vec, zone_number = 7, filename = "test.csv", directory = "/filelocation/", storeInDirectory = TRUE)}
 #'
 BIEN.BioClim.Genus <- function(genus_vector, zone_number, filename = NULL, directory = NULL, storeInDirectory = FALSE) {
-  #invoke required packages
-  require(sp)
-  require(raster)
-  require(stats)
-  require(utils)
 
   #set working directory to the optional parameter if it's entered
   old_directory = getwd()
@@ -253,6 +255,12 @@ BIEN.BioClim.Genus <- function(genus_vector, zone_number, filename = NULL, direc
 #'
 #' @export
 #'
+#' @import sp
+#' @import raster
+#' @import stats
+#' @import utils
+#' @import BIEN3Project
+#'
 #' @note The examples are labeled as "Not run" becuase the function accesses files and if the directory
 #' is not correct, when the code is tested it wont be able to find the .bil file.
 #'
@@ -262,11 +270,6 @@ BIEN.BioClim.Genus <- function(genus_vector, zone_number, filename = NULL, direc
 #' genus_data <- BIEN.BioClim.Family(family_vector = f_vec, zone_number = 7, filename = "test.csv", directory = "/filelocation/", storeInDirectory = TRUE)
 #' }
 BIEN.BioClim.Family <- function(family_vector, zone_number, filename = NULL, directory = NULL, storeInDirectory = FALSE) {
-  #invoke required packages
-  require(sp)
-  require(raster)
-  require(stats)
-  require(utils)
 
   #set working directory to the optional parameter if it's entered
   old_directory = getwd()
@@ -357,11 +360,11 @@ BIEN.BioClim.Family <- function(family_vector, zone_number, filename = NULL, dir
 #'
 #' @export
 #'
+#' @import sp
+#' @import raster
+#'
 #' @return This function returns the values of a raster layer at the specified coordinates.
 RasterLayerCoordinates <- function(longitude, latitude, raster_layer) {
-  #invoke required packages
-  require(sp)
-  require(raster)
 
   #if there is an unequal number of longitude and latitude points
   #something is wrong on the function call end and so we stop function

@@ -16,6 +16,8 @@
 #'
 #' @export
 #'
+#' @import raster
+#'
 #' @note I'm using a raster brick because, "while a RasterBrick has to refer to one multi-layer file or
 #' is in itself a multi-layer object with data loaded in memory, a RasterStack may 'virtually'
 #' connect several raster objects written to different files or in memory. Processing will be
@@ -31,9 +33,6 @@
 #' raster_vec <- c(raster("bio_1.bil"), raster("bio_9.bil"), raster("bio_4.bil"))
 #' ExtractMultiple(raster_vector = raster_vec, gis_data = gis_data, filename = "your_file_name.csv", storeInDirectory = TRUE)
 ExtractMultiple <- function(raster_vector, gis_data, projection = NULL, filename = NULL, storeInDirectory = FALSE) {
-  #invoke necessary libraries
-  require(raster)
-
   #check to make sure raster_vector is not empty
   if(length(raster_vector) == 0) {
     stop("The raster* object passed into this function contains no raster layers.")
