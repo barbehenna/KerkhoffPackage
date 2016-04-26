@@ -1,0 +1,25 @@
+Package: KerkhoffLab
+Type: Package
+Title: Useful Code for Kerkhoff Lab Group
+Version: 0.2
+Date: 2016-03-19
+Imports:
+    maptools,
+    raster (>= 2.4-18),
+    rgdal,
+    rgeos,
+    RPostgreSQL,
+    sp,
+    stats,
+    utils,
+    BIEN3Project
+Remotes: barbehenna/BEIN3Project
+Author: Authors@R: c(
+    person("Alton", "Barbehnn", email = "barbehenna@kenyon.edu", role = c("cre", "aut")),
+    person("Brian", "Maitner", email = "", role = "aut"))
+Maintainer: Alton Barbehenn <barbehenna@kenyon.edu>
+Description: Fucntions include those written for and by members of the BIEN3 project
+  as well as useful code written by members of Dr. Andrew Kerkhoff's Lab Group.
+License: GPL (>= 2)
+LazyData: TRUE
+RoxygenNote: 5.0.1
